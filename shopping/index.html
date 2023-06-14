@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Mobile Store</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <h1>Mobile store </h1>
+
+    <div class="container">
+        <div id="catalog"  class="grid-container">
+       
+            <div class="product">
+                <img src="https://cdn.tmobile.com/content/dam/t-mobile/en-p/cell-phones/apple/Apple-iPhone-14/Blue/Apple-iPhone-14-Blue-thumbnail.png" alt="Iphone 13">
+                <h3>Iphone 13</h3>
+                <p>Price: $599.99</p>
+                <div class="product-action">
+                    <button onclick="decrementQuantity('Iphone 13')">-</button>
+                    <span id="quantity-Iphone 13">0</span>
+                    <button onclick="incrementQuantity('Iphone 13')">+</button>
+                </div>
+                <button onclick="addToCart('Iphone 13', 599.99)">Add to Cart</button>
+                <button class="like-button" onclick="toggleLikeButton(this)">&#x2661;</button>
+            </div>
+          
+          <div class="product">
+                <img src="https://www.mytrendyphone.eu/images/Saii-Premium-iPhone-14-Pro-Liquid-Silicone-Case-Black-09082022-04-p.webp" alt="Iphone 13">
+                <h3>ٍ Silicon cover</h3>
+                <p>Price: $99.99</p>
+                <div class="product-action">
+                    <button onclick="decrementQuantity(' Silicon cover')">-</button>
+                    <span id="quantity-Silicon cover">0</span>
+                    <button onclick="incrementQuantity('Silicon cover')">+</button>
+                </div>
+                <button onclick="addToCart('Silicon cover', 99.99)">Add to Cart</button>
+                <button class="like-button" onclick="toggleLikeButton(this)">&#x2661;</button>
+            </div>
+
+            <div class="product">
+                <img src="https://specials-images.forbesimg.com/imageserve/63371261af680225fb8d0501/Bowers---Wilkins-Px7-S2/0x800.jpg?cropX1=0&cropX2=344&cropY1=0&cropY2=497" alt="HeadPhone">
+                <h3>HeadPhone</h3>
+                <p>Price: $59.99</p>
+                <div class="product-action">
+                    <button onclick="decrementQuantity('HeadPhone')">-</button>
+                    <span id="quantity-HeadPhone">0</span>
+                    <button onclick="incrementQuantity('HeadPhone')">+</button>
+                </div>
+                <button onclick="addToCart('HeadPhone', 59.99)">Add to Cart</button>
+                <button class="like-button" onclick="toggleLikeButton(this)">&#x2661;</button>
+            </div>
+
+          <div class="product">
+                <img src="data:image/jpeg;base64,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" alt="Samsung s23 Ultra">
+                <h3>Samsung s23 Ultra</h3>
+                <p>Price: $799.99</p>
+                <div class="product-action">
+                    <button onclick="decrementQuantity('Samsung s23 Ultra')">-</button>
+                    <span id="quantity-Samsung s23 Ultra">0</span>
+                    <button onclick="incrementQuantity('Samsung s23 Ultra')">+</button>
+                </div>
+                <button onclick="addToCart('Samsung s23 Ultra', 799.99)">Add to Cart</button>
+                <button class="like-button" onclick="toggleLikeButton(this)">&#x2661;</button>
+            </div>
+          
+          <div class="product">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNIkf3yLTnRjB066xKZYCsG76yRbFyhrylDw&usqp=CAU" alt="Airpods pro 2">
+                <h3>Airpods pro 2</h3>
+                <p>Price: $299.99</p>
+                <div class="product-action">
+                    <button onclick="decrementQuantity('Airpods pro 2')">-</button>
+                    <span id="quantity-Iphone 13">0</span>
+                    <button onclick="incrementQuantity('Airpods pro 2')">+</button>
+                </div>
+                <button onclick="addToCart('Airpods pro 2', 599.99)">Add to Cart</button>
+                <button class="like-button" onclick="toggleLikeButton(this)">&#x2661;</button>
+            </div>
+          
+            <div class="product">
+                <img src="https://btech.com/cdn-cgi/image/quality=50,format=auto/media/catalog/product/cache/ead4866c641338b50cadbc0815eacb19/n/4/n41272020a_1_hl3v73atz0iv7bgf.jpg" alt="Cover transparent">
+                <h3>Cover transparent</h3>
+                <p>Price: $29.99</p>
+                <div class="product-action">
+                    <button onclick="decrementQuantity('Cover transparent')">-</button>
+                    <span id="quantity-Cover transparent">0</span>
+                    <button onclick="incrementQuantity('Cover transparent')">+</button>
+                </div>
+                <button onclick="addToCart('Cover transparent', 29.99)">Add to Cart</button>
+                <button class="like-button" onclick="toggleLikeButton(this)">&#x2661;</button>
+            </div>
+        </div>
+
+        <div id="cart">
+            <h2>Shopping Cart</h2>
+            <ul id="cart-items">
+            </ul>
+            <p id="total">Total: $0</p>
+            <button onclick="checkout()">Checkout</button>
+        </div>
+    </div>
+</body>
+
+</html>
